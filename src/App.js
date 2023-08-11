@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import LoginPage from "./pages/LoginPage";
+import DevicePage from "./pages/DevicePage";
+import RegisterPage from "./pages/RegisterPage";
+import DetailPage from "./pages/DetailPage";
+import "./App.css";
+import api from "./pages/component/api"; // Axios 설정
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/MainPage" element={<MainPage />} />
+          <Route path="/DevicePage" element={<DevicePage />} />
+          <Route path="/DetailPage" element={<DetailPage />} />
+          <Route path="/LoginPage" element={<LoginPage api={api} />} />
+          <Route path="/RegisterPage" element={<RegisterPage api={api} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

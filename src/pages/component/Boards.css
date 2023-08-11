@@ -1,0 +1,75 @@
+/* Boards.css */
+
+.app-container {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.top {
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#body {
+  width: 500px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.post-time {
+  color: #777;
+}
+
+.post-body {
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+/* 수정된 스타일 */
+.post-title-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
