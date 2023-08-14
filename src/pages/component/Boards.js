@@ -49,7 +49,6 @@ function Boards() {
     api
       .post("boards/brd/", newPost)
       .then((response) => {
-        console.log("New post created:", response.data);
         fetchPosts();
       })
       .catch((error) => {
@@ -67,7 +66,7 @@ function Boards() {
 
   return (
     <div className="app-container">
-      <h1 className="top">게시판</h1>
+      <h1 className="top">여러 전자기기에 대한 후기</h1>
 
       <form onSubmit={handleSubmit}>
         <div className="wrapper">
@@ -78,7 +77,7 @@ function Boards() {
               id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="제목"
+              placeholder="기기 정보"
               required
             />
           </div>
@@ -88,13 +87,13 @@ function Boards() {
               id="body"
               value={body}
               onChange={(e) => setBody(e.target.value)}
-              placeholder="본문"
+              placeholder="후기를 작성해 주세요."
               required
             />
           </div>
           <div className="form-actions">
             <div className="button-container">
-              <button type="submit">게시글 작성</button>
+              <button type="submit">작성</button>
             </div>
           </div>
         </div>

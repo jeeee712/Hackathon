@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import LoginButton from "./LoginButton"; // Import LoginButton component
-import "../MainPage.css"; // Replace with your CSS file
+import LoginButton from "./LoginButton";
+import "../MainPage.css";
+import Cookies from "js-cookie";
 
 function Navigation() {
+  const [showCategories, setShowCategories] = useState(false);
+
+  const handleCategoriesToggle = () => {
+    setShowCategories(!showCategories);
+  };
+
   return (
     <div>
-      {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
-          <a className="navbar-brand" href="#!">
-            Start Bootstrap
-          </a>
+          데일렉트로닉
           <button
             className="navbar-toggler"
             type="button"
@@ -28,50 +32,60 @@ function Navigation() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#!">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#!">
-                  About
-                </a>
-              </li>
-              <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
-                  to="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/MainPage"
                 >
-                  Shop
+                  홈
                 </Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              </li>
+
+              <li className="nav-item dropdown">
+                <div
+                  className={`nav-link dropdown-toggle ${
+                    showCategories ? "show" : ""
+                  }`}
+                  onClick={handleCategoriesToggle}
+                >
+                  전자기기
+                </div>
+                <ul
+                  className={`dropdown-menu ${showCategories ? "show" : ""}`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <li>
-                    <Link className="dropdown-item" to="/products">
-                      All Products
+                    <Link className="dropdown-item" to="/category/tv">
+                      TV
                     </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/popular">
-                      Popular Items
+                    <Link className="dropdown-item" to="/category/notebook">
+                      노트북
                     </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/new-arrivals">
-                      New Arrivals
+                    <Link className="dropdown-item" to="/category/tablet">
+                      태블릿
+                    </Link>
+                    <Link className="dropdown-item" to="/category/phone">
+                      휴대폰
+                    </Link>
+                    <Link className="dropdown-item" to="/category/vacuum">
+                      청소기
                     </Link>
                   </li>
                 </ul>
               </li>
+              <li className="nav-item">
+                {Cookies.get("token") ? (
+                  <div>
+                    <Link className="nav-link" to="/CurrentPage">
+                      마이페이지
+                    </Link>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </li>
             </ul>
-            <LoginButton handleLogout={() => {}} />{" "}
-            {/* Use the LoginButton component */}
+            <LoginButton handleLogout={() => {}} />
           </div>
         </div>
       </nav>

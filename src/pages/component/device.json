@@ -1,0 +1,91 @@
+{
+  "tv": [
+    {
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8627885%2F86278851808.jpg&type=a340",
+      "name": "삼성 QLED TV",
+      "description": "고화질 이미지와 생생한 색감을 제공하는 QLED 기술로 제작된 삼성 TV입니다.",
+      "price": "2,499,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA2MDNfNDIg%2FMDAxNTU5NTIxODcwNTgw.ZT0FEtlMkUZ5PzhQhBLjoyHb8UFExCESKRDd8KF8Npcg.Ed4-s2-5CUCxMMlHLx9IE8lGKN6GJ3Nv02F2uQqGyVIg.JPEG.nr_factory%2F%25BA%25B8%25C1%25A4.jpg&type=a340",
+      "name": "삼성 더 프레임 TV",
+      "description": "작품의 느낌을 갖춘 디자인과 TV로 사용할 수 있는 프레임 모드를 제공하는 삼성 TV입니다.",
+      "price": "1,899,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_3977351%2F39773510524.2.jpg&type=a340",
+      "name": "삼성 크리스탈 UHD TV",
+      "description": "고화질 이미지와 높은 명암비를 갖춘 삼성 크리스탈 UHD TV입니다.",
+      "price": "849,000원"
+    }
+  ],
+  "notebook": [
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20230521_53%2F1684625503264YX9gj_JPEG%2F3514805085186000_1987517751.jpg&type=a340",
+      "name": "삼성 갤럭시 북 플렉스",
+      "description": "유연한 접이식 디자인과 높은 성능을 갖춘 삼성 갤럭시 북 플렉스 노트북입니다.",
+      "price": "1,699,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20230603_46%2F1685758411241gggfK_PNG%2F31502079053213212_1428138561.png&type=a340",
+      "name": "삼성 갤럭시 북 이온",
+      "description": "가벼운 디자인과 오랜 배터리 수명을 갖춘 갤럭시 북 이온 노트북입니다.",
+      "price": "1,355,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5631%2F2019%2F04%2F08%2F0000005002_002_20190408104615361.jpg&type=a340",
+      "name": "삼성 노트북 오디세이",
+      "description": "게이머를 위한 고성능 노트북으로, 뛰어난 그래픽 성능과 디자인을 제공합니다.",
+      "price": "2,599,000원"
+    }
+  ],
+
+  "vacuum": [
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MDRfNTAg%2FMDAxNjg1ODY0OTc4MDE0.X5c1fXqKtuhvMvM805e1c4pw28QhLJpimzAilBmZYBcg.wmGdhnoT9RyjuZPhcVC5RmwvYKX6J9AZyAtjnhOA2sog.JPEG.leejyun917%2Foutput_1033121365.jpg&type=a340",
+      "name": "삼성 로봇 청소기",
+      "description": "스마트한 자동 청소 기능과 앱 연동을 통한 원격 제어를 제공하는 삼성 로봇 청소기입니다.",
+      "price": "885,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjRfMjk0%2FMDAxNjMyNDc0NTU5MDE1.PT7WFWb-TAeoRv3Suufy5qIoy13YkULdNYVSHt8Y2x4g.mNQP76Kaa4cDwdooA-atQiyiQaL6kKmVjkzxt28KgZsg.JPEG.ensemal3767%2Fbc5c579d1-9d45-4954-8ed0-532203056175.jpg&type=a340",
+      "name": "삼성 제트 스틱 청소기",
+      "description": "강력한 흡입력과 다양한 청소 악세서리로 제공되는 삼성 제트 스틱 청소기입니다.",
+      "price": "419,000원"
+    }
+  ],
+  "tablet": [
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjFfMTI3%2FMDAxNjI0Mjc2Njk1ODI1.l8D6TehV7oQw1MRZu9dCvecVLQwVHqNm3dkriYhEURsg.KgpmX5990XKSbKS6sSxQ53hMLhd7KKl4x76hwMxZE9og.JPEG.42dah%2FIMG_0887.jpg&type=a340",
+      "name": "삼성 갤럭시 탭 S7",
+      "description": "멀티태스킹 및 디지털 콘텐츠 소비에 최적화된 고성능 삼성 갤럭시 탭 S7 태블릿 컴퓨터입니다.",
+      "price": "1,355,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220117_66%2F1642393689543EWU4G_JPEG%2F43529585272707987_1768717036.jpg&type=a340",
+      "name": "삼성 갤럭시 탭 A",
+      "description": "가벼운 디자인과 다양한 사용자를 위한 삼성 갤럭시 탭 A 태블릿 컴퓨터입니다.",
+      "price": "1,355,000원"
+    }
+  ],
+  "phone": [
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAyMzA0MTJfMjc0%2FMDAxNjgxMjgyODE2ODQ3.9xZ1c8yf0UfRi6TP_iLn8OZX7xrPiUKJudHL6wWAwaEg.oDFj84H3paJ9ZxdrJUqVFLNfTzxpC-Tl7vRMT41h6mMg.JPEG%2FIqA2nNSrvnnaOfjTtZNgcA_4DVYQ.jpg&type=a340",
+      "name": "삼성 갤럭시 Z 플립5",
+      "description": "접이식 디자인과 고급 카메라, 스마트 기능을 갖춘 갤럭시 시리즈의 스마트폰입니다.",
+      "price": "617,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20230629_69%2F1688025830947jzCgP_JPEG%2F89161658775442952_1368064666.jpg&type=a340",
+      "name": "삼성 갤럭시 S21",
+      "description": "고화질 화면과 강력한 성능을 갖춘 삼성 갤럭시 S21 스마트폰입니다.",
+      "price": "388,000원"
+    },
+    {
+      "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20230629_184%2F1687977687653QCQUx_JPEG%2F5304619192586886_1166360837.jpg&type=a340",
+      "name": "삼성 갤럭시 노트20",
+      "description": "S 펜과 고급 기능을 제공하는 삼성 갤럭시 노트20 스마트폰입니다.",
+      "price": "221,000원"
+    }
+  ]
+}

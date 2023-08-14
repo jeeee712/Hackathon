@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f4f4;
-  height: auto;
 }
 
 .signup-container h2 {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -28,7 +28,16 @@
   font-size: 16px;
 }
 
+/* 버튼 컨테이너의 스타일 */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px; /* 필요에 따라 값을 조정하세요 */
+}
+
 .signup-container button {
+  flex: 1;
+  margin: 0 2px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;

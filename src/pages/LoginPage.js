@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import LoginButton from "./component/LoginButton";
+import Cookies from "js-cookie";
 
 function LoginPage({ api }) {
   // api 전달 받음
@@ -16,10 +17,12 @@ function LoginPage({ api }) {
     try {
       const response = await api.post("users/login", { email, password });
       const data = response.data;
-      console.log(data.user);
-      if (data.user) {
-        setIsLoggedIn(true);
-        navigate("/MainPage?isLoggedIn=true");
+      if (data.user.token) {
+        // setIsLoggedIn(true);
+        const jwtToken = data.user.token;
+        console.log(jwtToken);
+        Cookies.set("token", jwtToken);
+        navigate("/MainPage");
       } else {
         setMessage(data.message);
       }
@@ -29,17 +32,12 @@ function LoginPage({ api }) {
     }
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    setMessage("");
-  };
-
   return (
     <div className="login-container">
       {isLoggedIn ? (
         <div>
-          <p>You are logged in.</p>
-          <LoginButton isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
+          <p>이미 로그인된 상태입니다.</p>
+          <LoginButton />
         </div>
       ) : (
         <div>

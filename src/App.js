@@ -4,7 +4,9 @@ import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import DevicePage from "./pages/DevicePage";
 import RegisterPage from "./pages/RegisterPage";
+import CurrentPage from "./pages/CurrentPage";
 import DetailPage from "./pages/DetailPage";
+import CurrentUpdatePage from "./pages/CurrentUpdatePage";
 import "./App.css";
 import api from "./pages/component/api"; // Axios 설정
 
@@ -14,7 +16,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/MainPage" element={<MainPage />} />
-          <Route path="/DevicePage" element={<DevicePage />} />
+          <Route path="/category/:categoryName" element={<DevicePage />} />
+          <Route path="/DetailPage" element={<DetailPage />} />
+          <Route path="/CurrentPage" element={<CurrentPage />} />
+          <Route path="/CurrentUpdatePage" element={<CurrentUpdatePage />} />
           <Route path="/DetailPage" element={<DetailPage />} />
           <Route path="/LoginPage" element={<LoginPage api={api} />} />
           <Route path="/RegisterPage" element={<RegisterPage api={api} />} />

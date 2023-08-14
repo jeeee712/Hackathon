@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navigation from "./component/Navigation";
+import Footer from "./component/Footer";
 import "./RegisterPage.css";
 
 function RegisterPage({ api }) {
@@ -32,45 +34,49 @@ function RegisterPage({ api }) {
   };
 
   return (
-    <div className="signup-container">
-      <h2>회원가입</h2>
-      <div>
-        <label>이름</label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setName(e.target.value)}
-        />
+    <div>
+      <Navigation />
+      <div className="signup-container">
+        <h2>회원가입</h2>
+        <div>
+          <label>이름</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>이메일</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>휴대폰번호</label>
+          <input
+            type="tel"
+            value={phone_number}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>비밀번호</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button onClick={handleSignUp}>회원가입</button>
+        <p>{message}</p>
+        <p>
+          이미 회원이신가요? <Link to="/LoginPage">로그인</Link>
+        </p>
       </div>
-      <div>
-        <label>이메일</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>휴대폰번호</label>
-        <input
-          type="tel"
-          value={phone_number}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>비밀번호</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button onClick={handleSignUp}>회원가입</button>
-      <p>{message}</p>
-      <p>
-        이미 회원이신가요? <Link to="/LoginPage">로그인</Link>
-      </p>
+      <Footer />
     </div>
   );
 }

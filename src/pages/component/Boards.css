@@ -51,12 +51,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 16px; /* 래퍼(wrapper)와 동일한 폰트 크기 유지 */
 }
 
 .post-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-size: 14px; /* 제목과 구분하기 위해 콘텐츠 폰트 크기 조정 */
 }
 
 .button-container {
