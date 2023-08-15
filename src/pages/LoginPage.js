@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import LoginButton from "./component/LoginButton";
+import Navigation from "./component/Navigation";
+import Footer from "./component/Footer";
 import Cookies from "js-cookie";
 
 function LoginPage({ api }) {
@@ -22,7 +24,7 @@ function LoginPage({ api }) {
         const jwtToken = data.user.token;
         console.log(jwtToken);
         Cookies.set("token", jwtToken);
-        navigate("/MainPage");
+        navigate("/");
       } else {
         setMessage(data.message);
       }
@@ -33,38 +35,41 @@ function LoginPage({ api }) {
   };
 
   return (
-    <div className="login-container">
-      {isLoggedIn ? (
-        <div>
-          <p>이미 로그인된 상태입니다.</p>
-          <LoginButton />
-        </div>
-      ) : (
-        <div>
-          <h2>로그인</h2>
+    <div>
+      <Navigation />
+      <div className="login-container">
+        {isLoggedIn ? (
           <div>
-            <label>이메일</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+            <p>이미 로그인된 상태입니다.</p>
+            <LoginButton />
           </div>
+        ) : (
           <div>
-            <label>비밀번호</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <h2>로그인</h2>
+            <div>
+              <label>이메일</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>비밀번호</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button onClick={handleLogin}>Login</button>
+            <p>{message}</p>
+            <p>
+              계정이 없으신가요? <Link to="/RegisterPage">회원가입</Link>
+            </p>
           </div>
-          <button onClick={handleLogin}>Login</button>
-          <p>{message}</p>
-          <p>
-            계정이 없으신가요? <Link to="/RegisterPage">회원가입</Link>
-          </p>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useResolvedPath } from "react-router-dom";
 import Cookies from "js-cookie";
-import "./CurrentPage.css";
+import Navigation from "./component/Navigation";
+import "./CurrentUpdatePage.css";
 import axios from "axios";
+import Footer from "./component/Footer";
 
 function CurrentUpdatePage({ api }) {
   // api 전달 받음
@@ -49,34 +51,38 @@ function CurrentUpdatePage({ api }) {
     });
 
   return (
-    <div className="signup-container">
-      <h2>회원 정보 수정</h2>
-      <div>
-        <label>이름</label>
-        <input
-          type="text"
-          placeholder={beforeUsername}
-          value={username}
-          onChange={(e) => setName(e.target.value)}
-        />
+    <div>
+      <Navigation />
+      <div className="signup-container">
+        <h2>회원 정보 수정</h2>
+        <div>
+          <label>이름</label>
+          <input
+            type="text"
+            placeholder={beforeUsername}
+            value={username}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>이메일</label>
+          <input
+            type="email"
+            placeholder={beforeEmail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="button-container">
+          <Link to="/CurrentPage">
+            <button>뒤로가기</button>
+          </Link>
+          <Link to="/CurrentPage">
+            <button onClick={handleUpdate}>수정하기</button>
+          </Link>
+        </div>
+        <p>{message}</p>
       </div>
-      <div>
-        <label>이메일</label>
-        <input
-          type="email"
-          placeholder={beforeEmail}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <Link to="/CurrentPage">
-        <button>뒤로가기</button>
-      </Link>
-      <Link to="/CurrentPage">
-        <button onClick={handleUpdate}>수정하기</button>
-      </Link>
-      {/* 회원 탈퇴 컴포넌트  */}
-      <p>{message}</p>
     </div>
   );
 }

@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/MainPage" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />{" "}
           <Route path="/category/:categoryName" element={<DevicePage />} />
-          <Route path="/DetailPage" element={<DetailPage />} />
+          <Route path="/DetailPage/:productName" element={<DetailPage />} />
           <Route path="/CurrentPage" element={<CurrentPage />} />
           <Route path="/CurrentUpdatePage" element={<CurrentUpdatePage />} />
           <Route path="/DetailPage" element={<DetailPage />} />

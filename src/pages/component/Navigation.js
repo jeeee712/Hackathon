@@ -17,7 +17,7 @@ function Navigation() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
-          데일렉트로닉
+          웹사이트 이름
           <button
             className="navbar-toggler"
             type="button"
@@ -32,11 +32,7 @@ function Navigation() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/MainPage"
-                >
+                <Link className="nav-link active" aria-current="page" to="/">
                   홈
                 </Link>
               </li>

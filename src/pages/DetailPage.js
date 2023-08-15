@@ -25,8 +25,10 @@ function getProductData(productName) {
 function DetailPage() {
   const { productName } = useParams(); // productName을 useParams로 추출
 
+  const decodedProductName = decodeURIComponent(productName);
+
   // 제품 정보 데이터를 가져올 함수 또는 상태 관리 로직이 필요할 수 있습니다.
-  const product = getProductData(productName); // getProductData는 해당 제품 정보를 가져오는 함수로 가정
+  const product = getProductData(decodedProductName); // 디코딩된 제품명 사용
 
   if (!product) {
     return <div>제품 정보를 찾을 수 없습니다.</div>;

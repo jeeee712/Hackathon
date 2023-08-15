@@ -10,7 +10,7 @@ function Footer() {
       <footer className="py-5 bg-dark">
         <div className="container">
           <p className="m-0 text-center text-white">
-            Copyright &copy; Your Website 2023
+            Copyright &copy; 베지밀 2023 + 팀원 이름
           </p>
         </div>
       </footer>

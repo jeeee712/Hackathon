@@ -12,10 +12,8 @@ function MainPage() {
       <header className="bg-dark py-5" style={{ height: "70vh" }}>
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-white">
-            <h1 className="display-4 fw-bolder">Shop in style</h1>
-            <p className="lead fw-normal text-white-50 mb-0">
-              With this shop homepage template
-            </p>
+            <h1 className="display-4 fw-bolder">웹사이트 이름</h1>
+            <p className="lead fw-normal text-white-50 mb-0">웹 사이트 설명</p>
           </div>
         </div>
       </header>

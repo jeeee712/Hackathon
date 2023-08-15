@@ -76,7 +76,6 @@ function RegisterPage({ api }) {
           이미 회원이신가요? <Link to="/LoginPage">로그인</Link>
         </p>
       </div>
-      <Footer />
     </div>
   );
 }

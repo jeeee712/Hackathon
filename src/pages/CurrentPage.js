@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./CurrentPage.css";
 import axios from "axios";
+import Footer from "./component/Footer";
 import Cookies from "js-cookie";
+import Navigation from "./component/Navigation";
 
 function CurrentPage({ api }) {
   // api 전달 받음
@@ -39,7 +41,7 @@ function CurrentPage({ api }) {
       );
       const data = response.data;
       if (data.user) {
-        navigate("/MainPage");
+        navigate("/");
       }
     } catch (error) {
       setMessage("중복된 회원이 있습니다.");
@@ -47,27 +49,30 @@ function CurrentPage({ api }) {
   };
 
   return (
-    <div className="signup-container">
-      <h2>회원 정보 조회</h2>
-      <div>
-        <label>이름</label>
-        <input type="text" value={username} readOnly />
-      </div>
-      <div>
-        <label>이메일</label>
-        <input type="email" value={email} readOnly />
-      </div>
-      <div className="button-container">
-        <Link to="/MainPage">
-          <button>취소</button>
-        </Link>
-        <Link to="/CurrentUpdatePage">
-          <button>수정</button>
-        </Link>
-        {/* 회원 탈퇴 컴포넌트  */}
-        <Link to="/CurrentDelete">
-          <button onClick={handleDelete}>탈퇴</button>
-        </Link>
+    <div>
+      <Navigation />
+      <div className="signup-container">
+        <h2>회원 정보 조회</h2>
+        <div>
+          <label>이름</label>
+          <input type="text" value={username} readOnly />
+        </div>
+        <div>
+          <label>이메일</label>
+          <input type="email" value={email} readOnly />
+        </div>
+        <div className="button-container">
+          <Link to="/">
+            <button>취소</button>
+          </Link>
+          <Link to="/CurrentUpdatePage">
+            <button>수정</button>
+          </Link>
+          {/* 회원 탈퇴 컴포넌트  */}
+          <Link to="/">
+            <button onClick={handleDelete}>탈퇴</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
