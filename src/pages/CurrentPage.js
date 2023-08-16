@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./CurrentPage.css";
 import axios from "axios";
-import Footer from "./component/Footer";
 import Cookies from "js-cookie";
 import Navigation from "./component/Navigation";
+import Footer from "./component/Footer";
 
 function CurrentPage({ api }) {
   // api 전달 받음
@@ -51,17 +51,27 @@ function CurrentPage({ api }) {
   return (
     <div>
       <Navigation />
-      <div className="signup-container">
+      <div className="current-container">
         <h2>회원 정보 조회</h2>
         <div>
           <label>이름</label>
-          <input type="text" value={username} readOnly />
+          <input
+            type="text"
+            className="current-input"
+            value={username}
+            readOnly
+          />
         </div>
         <div>
           <label>이메일</label>
-          <input type="email" value={email} readOnly />
+          <input
+            type="email"
+            className="current-input"
+            value={email}
+            readOnly
+          />
         </div>
-        <div className="button-container">
+        <div className="current-button-container">
           <Link to="/">
             <button>취소</button>
           </Link>
@@ -74,6 +84,7 @@ function CurrentPage({ api }) {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

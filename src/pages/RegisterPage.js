@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import "./RegisterPage.css";
+import { FormText } from "react-bootstrap";
 
 function RegisterPage({ api }) {
   // api 전달 받음
@@ -41,6 +42,7 @@ function RegisterPage({ api }) {
         <div>
           <label>이름</label>
           <input
+            className="signup-input"
             type="text"
             value={username}
             onChange={(e) => setName(e.target.value)}
@@ -49,6 +51,7 @@ function RegisterPage({ api }) {
         <div>
           <label>이메일</label>
           <input
+            className="signup-input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -57,6 +60,7 @@ function RegisterPage({ api }) {
         <div>
           <label>휴대폰번호</label>
           <input
+            className="signup-input"
             type="tel"
             value={phone_number}
             onChange={(e) => setPhone(e.target.value)}
@@ -65,17 +69,21 @@ function RegisterPage({ api }) {
         <div>
           <label>비밀번호</label>
           <input
+            className="signup-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button onClick={handleSignUp}>회원가입</button>
+        <button className="signup" onClick={handleSignUp}>
+          회원가입
+        </button>
         <p>{message}</p>
-        <p>
+        <span>
           이미 회원이신가요? <Link to="/LoginPage">로그인</Link>
-        </p>
+        </span>
       </div>
+      <Footer />
     </div>
   );
 }

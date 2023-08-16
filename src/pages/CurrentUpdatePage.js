@@ -53,11 +53,12 @@ function CurrentUpdatePage({ api }) {
   return (
     <div>
       <Navigation />
-      <div className="signup-container">
+      <div className="update-container">
         <h2>회원 정보 수정</h2>
         <div>
           <label>이름</label>
           <input
+            className="update-input"
             type="text"
             placeholder={beforeUsername}
             value={username}
@@ -67,22 +68,26 @@ function CurrentUpdatePage({ api }) {
         <div>
           <label>이메일</label>
           <input
+            className="update-input"
             type="email"
             placeholder={beforeEmail}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="button-container">
+        <div className="update-button-container">
           <Link to="/CurrentPage">
-            <button>뒤로가기</button>
+            <button className="back">뒤로가기</button>
           </Link>
           <Link to="/CurrentPage">
-            <button onClick={handleUpdate}>수정하기</button>
+            <button className="update" onClick={handleUpdate}>
+              수정하기
+            </button>
           </Link>
         </div>
         <p>{message}</p>
       </div>
+      <Footer />
     </div>
   );
 }

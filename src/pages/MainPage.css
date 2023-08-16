@@ -92,6 +92,22 @@
   box-sizing: border-box;
 }
 
+.toggleOn {
+  display: none;
+}
+.toggleOn .toggle-wrapper {
+  display: block;
+}
+.toggleOn ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 992px) {
+  .switch {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

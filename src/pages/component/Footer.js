@@ -7,10 +7,11 @@ function Footer() {
   return (
     <div>
       {/* Footer */}
-      <footer className="py-5 bg-dark">
+      <footer className="py-1 bg-dark">
         <div className="container">
           <p className="m-0 text-center text-white">
-            Copyright &copy; 베지밀 2023 + 팀원 이름
+            Copyright &copy; 2023 LIKELION 삼육대학교 베지밀 🥜 양정민 안홍영
+            진윤재 오지이 김민진 최성일
           </p>
         </div>
       </footer>

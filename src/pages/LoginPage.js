@@ -70,6 +70,7 @@ function LoginPage({ api }) {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

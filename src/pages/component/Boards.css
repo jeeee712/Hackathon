@@ -75,3 +75,23 @@ button {
   font-size: 14px;
   margin-left: 10px;
 }
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    display: block;
+  }
+
+  .button-container {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #title {
+    width: 100%;
+  }
+
+  #body {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

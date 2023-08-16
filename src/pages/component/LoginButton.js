@@ -13,7 +13,7 @@ const LoginButton = () => {
 
   return (
     <div>
-      <form className="d-flex">
+      <form>
         {Cookies.get("token") ? (
           <div>
             <button
