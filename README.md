@@ -22,7 +22,7 @@
         setMessage(data.message);
       }
     } catch (error) {
-      console.error("Error logging in:", error);
+    //오류확인  console.error("Error logging in:", error);
       setMessage("이메일 혹은 비밀번호를 확인해 주세요.");
     }
   };
@@ -56,7 +56,7 @@ const fetchPosts = () => {
       setLoading(false);
     })
     .catch((error) => {
-      console.error("Error fetching data:", error);
+     //오류확인 console.error("Error fetching data:", error);
       setLoading(false);
     });
 };
@@ -77,7 +77,7 @@ const handleSubmit = (event) => {
       fetchPosts();
     })
     .catch((error) => {
-      console.error("Error creating post:", error);
+     //오류확인 console.error("Error creating post:", error);
     });
 
   // 폼 초기화
