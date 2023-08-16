@@ -98,7 +98,7 @@ device.js 파일을 생성하고, 라우팅 정보와 컴포넌트를 매핑합�
 
 ```js
 // categoryName을 사용하여 해당 카테고리 데이터를 가져올 수 있습니다.
-const categoryData = deviceData[categoryName]; // 수정: category -> categoryName
+const categoryData = deviceData[categoryName];
 
 if (!categoryData) {
   return <div>해당 카테고리의 데이터를 찾을 수 없습니다.</div>;
