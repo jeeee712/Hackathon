@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 import Footer from "./component/Footer";
 import Navigation from "./component/Navigation";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { deviceData } from "./component/device"; // deviceData를 임포트
 import { useParams } from "react-router-dom"; // useParams 추가
 import "./DetailPage.css";
+import { setPageTitle } from "./component/setPageTitle";
 
 function getProductData(productName) {
   // deviceData에서 productName과 일치하는 제품을 찾아 반환하는 로직
@@ -29,6 +30,10 @@ function DetailPage() {
 
   // 제품 정보 데이터를 가져올 함수 또는 상태 관리 로직이 필요할 수 있습니다.
   const product = getProductData(decodedProductName); // 디코딩된 제품명 사용
+
+  useEffect(() => {
+    setPageTitle(product.name);
+  });
 
   if (!product) {
     return <div>제품 정보를 찾을 수 없습니다.</div>;

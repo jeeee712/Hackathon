@@ -1,11 +1,15 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Footer from "./component/Footer";
 import "./MainPage.css"; // Replace with your CSS file
 import Navigation from "./component/Navigation";
+import { setPageTitle } from "./component/setPageTitle";
 
 function MainPage() {
+  useEffect(() => {
+    setPageTitle("IT터미널");
+  }, []);
   return (
     <div>
       <Navigation />

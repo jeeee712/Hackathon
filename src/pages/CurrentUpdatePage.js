@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useResolvedPath } from "react-router-dom";
 import Cookies from "js-cookie";
 import Navigation from "./component/Navigation";
 import "./CurrentUpdatePage.css";
 import axios from "axios";
 import Footer from "./component/Footer";
+import { setPageTitle } from "./component/setPageTitle";
 
 function CurrentUpdatePage({ api }) {
+  useEffect(() => {
+    setPageTitle("정보 수정");
+  }, []);
+
   // api 전달 받음
   const navigate = useNavigate();
 

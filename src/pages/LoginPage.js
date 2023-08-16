@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import LoginButton from "./component/LoginButton";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import Cookies from "js-cookie";
+import { setPageTitle } from "./component/setPageTitle";
 
 function LoginPage({ api }) {
   // api 전달 받음
@@ -14,6 +15,10 @@ function LoginPage({ api }) {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setPageTitle("로그인");
+  }, []);
 
   const handleLogin = async () => {
     try {
@@ -62,7 +67,7 @@ function LoginPage({ api }) {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button onClick={handleLogin}>Login</button>
+            <button onClick={handleLogin}>로그인</button>
             <p>{message}</p>
             <p>
               계정이 없으신가요? <Link to="/RegisterPage">회원가입</Link>

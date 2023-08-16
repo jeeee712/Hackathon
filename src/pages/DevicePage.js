@@ -1,9 +1,10 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { deviceData } from "./component/device"; // 수정: 경로 변경
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import ProductComponent from "./component/ProductComponent"; // 예시 ProductComponent 컴포넌트
+import { setPageTitle } from "./component/setPageTitle";
 import "./DevicePage.css";
 
 function DevicePage() {
@@ -11,6 +12,10 @@ function DevicePage() {
 
   // categoryName을 사용하여 해당 카테고리 데이터를 가져올 수 있습니다.
   const categoryData = deviceData[categoryName]; // 수정: category -> categoryName
+
+  useEffect(() => {
+    setPageTitle(categoryName);
+  });
 
   if (!categoryData) {
     return <div>해당 카테고리의 데이터를 찾을 수 없습니다.</div>;

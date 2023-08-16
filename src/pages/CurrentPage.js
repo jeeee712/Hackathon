@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./CurrentPage.css";
 import axios from "axios";
 import Cookies from "js-cookie";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
+import { setPageTitle } from "./component/setPageTitle";
 
 function CurrentPage({ api }) {
+  useEffect(() => {
+    setPageTitle("마이페이지");
+  }, []);
+
   // api 전달 받음
   const navigate = useNavigate();
 

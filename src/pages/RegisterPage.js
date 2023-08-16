@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import "./RegisterPage.css";
 import { FormText } from "react-bootstrap";
+import { setPageTitle } from "./component/setPageTitle";
 
 function RegisterPage({ api }) {
   // api 전달 받음
@@ -14,6 +15,10 @@ function RegisterPage({ api }) {
   const [phone_number, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    setPageTitle("회원가입");
+  }, []);
 
   const handleSignUp = async () => {
     try {
